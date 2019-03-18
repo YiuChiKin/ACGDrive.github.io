@@ -1,0 +1,152 @@
+<html>
+<title>
+IoT Login Page
+</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- icon library: -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<style>
+.body
+{
+	background-image: radial-gradient(ellipse at bottom, white, orange);
+}
+
+.thistext 
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 10rem;
+	padding-top: 2.5rem;
+	color: #fff;
+	opacity: 0.5;
+}
+
+.IoT_text
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.6rem;
+	letter-spacing: 0.3rem;
+	opcaity: 0.9;
+}
+
+.input_box
+{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1rem;
+	width: 30%;
+	height: 3rem;
+	padding: 1rem;
+	padding-top: 0.8rem;
+	padding-bottom: 0.8rem;
+	padding-left: 4rem;
+	font-size: 0.9rem;
+	transition: all 0.8s ease-in;
+}
+
+.input_box:focus
+{
+	color: gray;
+	outline: none;
+    box-shadow:
+        0 0 1px #ff7bac,
+        0 0 3px #ff7bac,
+        0 0 4px #ff7bac,
+        0 0 8px #ff7bac,
+        0 0 10px #ff7bac,
+		0 0 30px #ff7bac;
+}
+
+.login_btn
+{
+	width: 30%;
+	margin:auto;
+	margin-top: 1rem;
+	height: 3rem;
+	padding: 0.5rem;
+	font-size: 1.2rem;
+	letter-spacing: 0.1rem;
+	outline: none;
+  background: linear-gradient(to right, transparent 50%, red 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 1s ease-out;
+}
+
+.login_btn:hover
+{
+	outline: none;
+}
+
+.login_btn:active
+{
+	outline: none;
+	background-position: left bottom;
+	color: red;
+}
+
+.login_btn:focus
+{
+	outline: none;
+	background-position: left bottom;
+	color: red;
+    box-shadow:
+        0 0 1px #ff00ff,
+        0 0 3px #ff00ff,
+        0 0 4px #ff00ff;
+}
+
+
+.forgetpassword 
+{
+	font-size: 0.7rem;
+	margin-top: 1.6rem;
+	letter-spacing: 0.03rem;
+}
+
+.image_atal
+{
+	width: 6rem;
+	position: relative;
+	margin: auto;
+	margin-top: 5rem;
+}
+
+.icon_img
+{
+	margin-left: 1.5rem;
+	margin-top: 1.9rem;
+	position: absolute;
+	color: grey;
+}
+</style>
+<body class="body text-center">
+	<h1 class="font-hairline w-full text-center thistext">
+		Hello!
+	</h1>
+	<h2 class="font-hairline w-full text-center IoT_text text-black">
+		IoT Smart Console
+	</h2>
+	<div class="flex flex-col">
+		<div class="bg-transparent font-hairline">
+			<i class="fas fa-user icon_img"></i>
+			<input class="bg-red-lightest input_box rounded-full" 
+			type="text" id="username" name="username" placeholder="Username" autocomplete="off">
+		</div>
+		<div class="bg-transparent font-hairline">
+			<i class="fas fa-lock icon_img"></i>
+			<input class="bg-red-lightest input_box rounded-full"
+				type="password" id="password" name="password" placeholder="Password">
+		</div>
+		<button class="text-white bg-red rounded-full font-hairline login_btn">
+			Login
+		</button>
+	</div>
+	<p class="text-black text-hairline forgetpassword" href="#">
+		Forget your password
+	</p>
+	<img src="atal.png" alt="ATAL" class="image_atal">
+</body>
+
+</html>
