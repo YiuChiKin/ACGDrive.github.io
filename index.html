@@ -7,10 +7,13 @@ IoT Login Page
 
 <!-- icon library: -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<script>
+
+</script>
 <style>
 .body
 {
-	background-image: radial-gradient(ellipse at bottom, white, orange);
+	background-image: radial-gradient(ellipse at bottom, white, #ff3333);
 }
 
 .thistext 
@@ -19,7 +22,24 @@ IoT Login Page
 	font-size: 11rem;
 	padding-top: 0%;
 	color: #fff;
-	opacity: 0.5;
+	opacity: 0.35;
+	letter-spacing: -0.7rem;
+}
+
+.thistext:after {
+  content:"Hello!";
+  transition: all 0.5s ease-in;
+}
+@keyframes hello_show {
+  0% {
+	opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+
+	}
 }
 
 .IoT_text
@@ -28,6 +48,44 @@ IoT Login Page
 	font-size: 1.6rem;
 	letter-spacing: 0.3rem;
 	opcaity: 0.9;
+	margin-top: 0;
+    animation: IoT_Fade_2 2s linear;
+    transition: all 1s ease-in;
+}
+
+@keyframes IoT_Fade {
+  0% {
+    text-shadow:
+        0 0 5px black,
+        0 0 10px black,
+        0 0 20px black,
+        0 0 40px black,
+        0 0 80px black,
+        0 0 90px black;
+  }
+  50% {
+    text-shadow:
+        0 0 5px black,
+        0 0 10px black,
+        0 0 20px black,
+        0 0 40px black;
+  }
+  100% {
+  text-shadow:
+        0 0 0 black;
+	}
+}
+
+@keyframes IoT_Fade_2 {
+  0% {
+	opacity: 0;
+  }
+  50% {
+	opacity: 0;
+  }
+  100% {
+	opacity: 1;
+	}
 }
 
 .input_box
@@ -42,7 +100,9 @@ IoT Login Page
 	padding-bottom: 1.1rem;
 	padding-left: 4rem;
 	font-size: 1rem;
-	transition: all 0.8s ease-in;
+	transition: all 0.2s ease-in;
+  animation: hello_show 4s linear;
+	
 }
 
 .input_box:focus
@@ -67,37 +127,42 @@ IoT Login Page
 	padding-bottom: 1rem;
 	height: auto;
 	font-size: 1.4rem;
-	letter-spacing: 0.1rem;
+	letter-spacing: -0.05rem;
 	outline: none;
-  background: linear-gradient(to right, transparent 50%, red 50%);
+  /*background: linear-gradient(to right, transparent 50%, red 50%);
   background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all 0.5s;
+  background-position: right bottom;*/
+  transition: all 0.2s;
 	padding-top: 0.8rem;
 	padding-bottom: 0.8rem;
+	animation: IoT_Fade_2 2s linear;
+	color: white;
 }
 
 .login_btn:hover
 {
 	outline: none;
+	/*background-color: grey;*/
+	text-shadow:
+        0 2px 1px white;
 }
 
 .login_btn:active
 {
 	outline: none;
-	background-position: left bottom;
-	color: red;
+	box-shadow:
+        0 0px 3px #888,
+        0 0px 5px #101010,
+        0 0px 10px #AAA;
+	text-shadow:
+        0 2px 1px #fff,
+        0 2px 2px #DDD;
 }
 
 .login_btn:focus
 {
 	outline: none;
-	background-position: left bottom;
-	color: red;
-    box-shadow:
-        0 0 1px #ff00ff,
-        0 0 3px #ff00ff,
-        0 0 4px #ff00ff;
+	opacity: 0.5;
 }
 
 
@@ -107,6 +172,7 @@ IoT Login Page
 	margin-top: 1.6rem;
 	letter-spacing: 0.03rem;
 	color: #555;
+	animation: IoT_Fade_2 2s linear;
 }
 
 .image_atal
@@ -147,8 +213,8 @@ IoT Login Page
 </style>
 <body class="body text-center">
 	<div class="login_form">
-		<h1 class="font-hairline w-full text-center thistext">
-			Hello!
+		<h1 class="font-hairline w-full text-center thistext" id="hello_text">
+
 		</h1>
 		<h2 class="font-hairline w-full text-center IoT_text text-black">
 			IoT Smart Console
