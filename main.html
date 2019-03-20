@@ -22,7 +22,7 @@ IoT Main Page
 
 .middle_div
 {
-	width: 88%;
+	width: 90%;
 	margin-top: 0.9rem;
 	height: 90vh;
 	/*background: url( hong-kong-night.jpg) no-repeat;
@@ -42,7 +42,23 @@ IoT Main Page
 
 .user_image_atal
 {
-	width: 2rem;
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+  margin-top: 0rem;
+  margin-left: 0.05rem;
+}
+
+.user_image_div
+{
+    width: 1.6rem;
+    height: 1.6rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+	background-color:white;
+	border-width: 1px;
+	border-color: white;
 }
 
 .username_p
@@ -56,7 +72,10 @@ IoT Main Page
 .date_p
 {
 	margin-top: 0.19rem;
-	font-family: 'Open Sans', sans-serif;
+	/*font-family: 'Open Sans', sans-serif;*/
+	font-family:'Courier New';
+	font-weight:1px;
+	letter-spacing: -0.1rem;
 	font-size: 0.4rem;
 	margin-left: 3rem;
 }
@@ -65,8 +84,10 @@ IoT Main Page
 {
 	/*padding-top: 0.1rem;*/
 	margin-left: 0.3rem;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 1.4rem;
+	font-family:'Courier New';
+	font-weight:1px;
+	letter-spacing: -0.2rem;
+	font-size: 1.5rem;
 }
 
 .nav_icon
@@ -79,7 +100,7 @@ IoT Main Page
 .menu_div
 {
 	position: absolute;
-	width: 6%;
+	width: 5%;
 	margin-top: 1.5rem;
 	font-size: 2rem;
 }
@@ -95,15 +116,15 @@ IoT Main Page
 .overlay_div1
 {
 	height: 8rem;
-	width: 20rem;
+	width: 28rem;
 	background-color: red;
 	opacity: 0.65;
 }
 
 .overlay_div2
 {
-	height: 10rem;
-	width: 30rem;
+	height: 15rem;
+	width: 25rem;
 	background-color: red;
 	opacity: 0.65;
 	margin-left: 2rem;
@@ -113,19 +134,113 @@ IoT Main Page
 {
 	position: absolute;
 	top: 68vh;
-	left: 10vw;
+	left: 8vw;
 }
 
 .overlap_title
 {
+	font-family: 'Exo', Thin;
 	margin-left: 1.5rem;
+	margin-top: 1.8rem;
+	font-size: 1.9rem;
+	letter-spacing: 0rem;
 }
+
+.oeverlap_paragraph
+{
+	margin-left: 1rem;
+	margin-top: 0.7rem;
+	font-size: 0.8rem;
+}
+
+.oeverlap_paragraph_icon
+{
+	margin-left: 1.6rem;
+	margin-top: 0.7rem;
+	font-size: 0.9rem;
+}
+
+.everlay_div2_title
+{
+	margin-top: 1.5rem;
+	margin-left: 1.5rem;
+	font-size: 1rem;
+}
+
+.everlay_div2_levels
+{
+	margin-top: 0.5rem;
+	margin-left: 1.5rem;
+	width: 22rem;
+	font-size: 0.8rem;
+}
+
+.overlay_div2_levelbox_div
+{
+	border-width: 1px;
+	min-width: 1.8rem;
+	/*min-height: 1.8rem;*/
+	margin: 1.5px;
+	display: inline-block;
+	padding-top: 0.3rem;
+	padding-bottom: 0.3rem;
+	outline:none;
+}
+
+.overlay_div2_levelbox_div:hover
+{
+	color: red;
+	background-color: white;
+}
+
+.overlay_div2_levelbox_div:focus
+{
+	color: red;
+	background-color: white;
+	outline:none;
+}
+
+.menu_icon
+{
+	font-size: 1.4rem;
+	padding: 2px;
+}
+
+.menu_icon:hover
+{
+	
+}
+
+.menu_btn
+{
+	outline: none;
+}
+
+.menu_btn.focus
+{
+	outline: none;
+	border-width: 0;
+}
+
+button:focus {outline:0;}	/* remove the focus border on all buttons */
+
+.choose_level_title
+{
+	font-family:'Courier New';
+	font-weight:1px;
+	letter-spacing: -0rem;
+	font-size: 1rem;
+}
+
 </style>
 <body class="body text-center">
 	<nav class="flex items-center justify-between flex-wrap bg-red shadow z-10">
 	  <div class="flex items-center flex-no-shrink text-white mr-6">
 		<img src="ATAL_white.png" alt="ATAL" class="icon_image_atal">
 	  </div>
+	  <p class="text-white choose_level_title">
+		Choose level
+	  </p>
 	  <div class="block flex-grow flex items-center nav_list">
 		<div class="text-sm flex-grow text-white">
 		</div>
@@ -154,28 +269,49 @@ IoT Main Page
 		  <div>
 			<p class="text-white username_p">Administrator</p>
 		  </div>
-		  <div>
-			<img src="profile_photo.jpg" alt="user" class="user_image_atal rounded-full">
+		  <div class="user_image_div">
+			<img src="profile_photo.jpg" alt="user" class="user_image_atal">
 		  </div>
 		</div>
 	  </div>
 	</nav>
 	<div class="menu_div h-auto z-0">
-		<p class="font-hairline text-white w-full">
-			<i class="fa fa-bars"></i>
-		</p>
+		<button class="font-hairline text-white w-full menu_btn">
+			<i class="fa fa-bars menu_icon"></i>
+		</button>
 	</div>
 	<div class="bg-white m-auto shadow-lg middle_div">
 		<img src="hong-kong-night.jpg" alt="ATAL" class="w-full z-0">
 		<div class="flex flex-row overlay_body">
 			<div class="z-10 overlay_div1">
-				<h2 class="text-hairline text-white text-left overlap_title">
+				<p class="text-hairline text-white text-left overlap_title">
 					IoT Smart Console
-				</h2>
+				</p>				
+				<div class="text-hairline text-white text-left flex flex-row">
+					<i class="fa fa-bars oeverlap_paragraph_icon"></i>
+					<p class="oeverlap_paragraph">
+						ATAL technologies Ltd.
+					</p>
+				</div>
 			</div>
-			<div class="z-10 overlay_div2"></div>
+			<div class="z-10 overlay_div2">
+				<p class="text-white text-left everlay_div2_title">
+					Choose level
+				</p>
+				<div class="text-white bg-transparent w-full text-left everlay_div2_levels" id="everlay_div2_levels"
+				style="">
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
-
+<script>
+$( document ).ready(function() {
+	console.log('ready');
+	for(i = 0; i<=38; i++)
+	{
+		$('#everlay_div2_levels').append("<button class='text-white text-center overlay_div2_levelbox_div'>" + i + "</button>");
+	}
+});
+</script>
 </html>
