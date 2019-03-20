@@ -118,7 +118,7 @@ IoT Main Page
 	height: 8rem;
 	width: 28rem;
 	background-color: red;
-	opacity: 0.65;
+	opacity: 0.8;
 }
 
 .overlay_div2
@@ -126,7 +126,7 @@ IoT Main Page
 	height: 15rem;
 	width: 25rem;
 	background-color: red;
-	opacity: 0.65;
+	opacity: 0.8;
 	margin-left: 2rem;
 }
 
@@ -144,6 +144,16 @@ IoT Main Page
 	margin-top: 1.8rem;
 	font-size: 1.9rem;
 	letter-spacing: 0rem;
+	transition: all 0.5s;
+}
+
+.overlap_title:hover
+{
+		text-shadow:
+        0 0 10px #fff,
+        0 0 20px #CCC,
+        0 0 30px #AAA,
+        0 0 80px #888;
 }
 
 .oeverlap_paragraph
@@ -151,6 +161,17 @@ IoT Main Page
 	margin-left: 1rem;
 	margin-top: 0.7rem;
 	font-size: 0.8rem;
+	outline: none;
+	color: white;
+	transition: all 0.5s;
+}
+
+.oeverlap_paragraph:hover
+{
+	text-shadow:
+        0 0 5px #fff,
+        0 0 20px #CCC;
+	color: white;
 }
 
 .oeverlap_paragraph_icon
@@ -185,6 +206,7 @@ IoT Main Page
 	padding-top: 0.3rem;
 	padding-bottom: 0.3rem;
 	outline:none;
+	transition: all 0.5s;
 }
 
 .overlay_div2_levelbox_div:hover
@@ -204,11 +226,16 @@ IoT Main Page
 {
 	font-size: 1.4rem;
 	padding: 2px;
+	transition: all 0.2s;
 }
 
 .menu_icon:hover
 {
-	
+		text-shadow:
+        0 0 10px #fff,
+        0 0 20px #CCC,
+        0 0 30px #AAA,
+        0 0 80px #888;
 }
 
 .menu_btn
@@ -248,17 +275,66 @@ button:focus {outline:0;}	/* remove the focus border on all buttons */
 }
 
 /* Modal Content */
+.modal
+{
+	background-color: transparent;
+	border-width: 0px;
+}
+
 .modal-content {
   background-color: transparent;
-  margin-left: 4rem;
+  margin-left: 3rem;
   border: 1px solid #888;
-  width: 10vw;
+  width: 16vw;
+  border-width: 0px;
 }
 
 .menu_list_item
 {
-	padding:2rem;
+	width: 100%;
+	padding-bottom: 0.8rem;
+	padding-top: 0.8rem;
+	padding-left: 1rem;
 	margin: 0.5rem;
+	background-color: white;
+	color: black;
+	font-size: 1rem;
+	opacity: 0.9;
+	font-family:'Courier New';
+	font-weight:1px;
+	letter-spacing: -0rem;
+	transition: all 0.5s;
+}
+
+.menu_list_item:hover
+{
+	background-color: red;
+	color: white;
+	opacity: 1;
+	letter-spacing: 0.15rem;
+}
+
+.menu_list_item_inside
+{
+	width: auto;
+	padding-bottom: 0.2rem;
+	padding-top: 0.2rem;
+	padding-left: 1rem;
+	margin: 0.2rem;
+	margin-left: 2rem;
+	background-color: white;
+	color: black;
+	font-size: 1rem;
+	opacity: 0.9;
+	font-family:'Courier New';
+	font-weight:1px;
+	letter-spacing: -0rem;
+	display:none;
+}
+
+.menu_item_text
+{
+	margin-left: 1rem;
 }
 </style>
 <body class="body text-center">
@@ -317,9 +393,9 @@ button:focus {outline:0;}	/* remove the focus border on all buttons */
 				</p>				
 				<div class="text-hairline text-white text-left flex flex-row">
 					<i class="fa fa-bars oeverlap_paragraph_icon"></i>
-					<p class="oeverlap_paragraph">
+					<button class="oeverlap_paragraph">
 						ATAL technologies Ltd.
-					</p>
+					</button>
 				</div>
 			</div>
 			<div class="z-10 overlay_div2">
@@ -335,12 +411,62 @@ button:focus {outline:0;}	/* remove the focus border on all buttons */
 <div id="myModal" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <div class="bg-blue w-full menu_list_item">
+    <button class="w-full text-left flex flex-row menu_list_item">
+		<i class="fa fa-sliders-h"></i>
+		<p class="menu_item_text">
+			IoT Smart Console
+		</p>
+	</button>
+    <button class="w-full text-left flex flex-row menu_list_item">
+		<i class="fa fa-bell"></i>
+		<p class="menu_item_text">
+			Notification
+		</p>
+	</button>
+    <button class="w-full text-left flex flex-row menu_list_item">
+		<i class="fa fa-chart-bar"></i>
+		<p class="menu_item_text">
+			Statistic
+		</p>
+	</button>
+    <div class="w-full text-left menu_list_item_inside">
+		<i class="fa fa-thermometer-three-quarters"></i>
+		<i class="fa fa-tint"></i>
+		IAQ
 	</div>
-    <div class="bg-blue w-full menu_list_item">
+    <div class="w-full text-left menu_list_item_inside">
+		People Counting
 	</div>
-	<div class="bg-blue w-full menu_list_item">
+	<div class="w-full text-left menu_list_item_inside">
+		Power Consumption
 	</div>
+    <div class="w-full text-left menu_list_item_inside">
+		Smart Litte Bin
+	</div>
+    <button class="w-full text-left flex flex-row menu_list_item">
+		<i class="fa fa-ellipsis-h"></i>
+		<p class="menu_item_text">
+			Status
+		</p>
+	</button>
+    <button class="w-full text-left flex flex-row menu_list_item">
+		<i class="fa fa-cog"></i>
+		<p class="menu_item_text">
+			System Preference
+		</p>
+	</button>
+    <button class="w-full text-left flex flex-row menu_list_item">
+		<i class="fa fa-comment-alt"></i>
+		<p class="menu_item_text">
+			Help Center
+		</p>
+	</button>
+    <button class="w-full text-left flex flex-row menu_list_item">
+		<i class="fa fa-arrow-right"></i>
+		<p class="menu_item_text">
+			Log-out
+		</p>
+	</button>
   </div>
 </div>
 </body>
