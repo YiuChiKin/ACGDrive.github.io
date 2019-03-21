@@ -118,7 +118,20 @@ IoT Main Page
 	height: 8rem;
 	width: 27.05rem;
 	background-color: red;
-	opacity: 0.8;
+	opacity: 0.75;
+	border-radius: -10rem;
+	box-shadow: 0 4px 8px 0 #888,
+            0 2px 4px 0 #BBB;
+}
+
+/*right top border radius*/
+.overlay_div1:after {
+  content: '';
+  position: absolute;
+  left: 27.05rem;
+  top: 0;
+  border-top: 12px solid red;
+  border-right: 12px solid transparent;
 }
 
 .overlay_div2
@@ -126,8 +139,10 @@ IoT Main Page
 	height: 14.25rem;
 	width: 27rem;
 	background-color: red;
-	opacity: 0.8;
+	opacity: 0.75;
 	margin-left: 0.6rem;
+	box-shadow: 0 4px 8px 0 #888,
+            0 2px 4px 0 #BBB;
 }
 
 .overlay_body
@@ -149,7 +164,7 @@ IoT Main Page
 
 .overlap_title:hover
 {
-		text-shadow:
+	text-shadow:
         0 0 10px #fff,
         0 0 20px #CCC,
         0 0 30px #AAA,
@@ -183,28 +198,29 @@ IoT Main Page
 
 .everlay_div2_title
 {
-	margin-top: 1.5rem;
+	margin-top: 1.8rem;
 	margin-left: 1.5rem;
-	font-size: 1rem;
+	font-size: 0.95rem;
 }
 
 .everlay_div2_levels
 {
-	margin-top: 0.5rem;
-	margin-left: 1.5rem;
-	width: 22rem;
-	font-size: 0.8rem;
+	margin-top: 0.6rem;
+	margin-left: 1.33rem;
+	width: 24rem;
+	font-size: 0.95rem;
+	font-weight: 1;
 }
 
 .overlay_div2_levelbox_div
 {
-	border-width: 1px;
-	min-width: 1.8rem;
+	border-width: 0.5px;
+	min-width: 2.2rem;
 	/*min-height: 1.8rem;*/
-	margin: 1.5px;
+	margin: 0.1rem;
 	display: inline-block;
-	padding-top: 0.3rem;
-	padding-bottom: 0.3rem;
+	padding-top: 0.47rem;
+	padding-bottom: 0.47rem;
 	outline:none;
 	transition: all 0.5s;
 }
@@ -475,7 +491,7 @@ button:focus {outline:0;}	/* remove the focus border on all buttons */
 <script>
 $( document ).ready(function() {
 	console.log('ready');
-	for(i = 0; i<=38; i++)
+	for(i = 1; i<=38; i++)
 	{
 		$('#everlay_div2_levels').append("<button class='text-white text-center overlay_div2_levelbox_div'>" + i + "</button>");
 	}
